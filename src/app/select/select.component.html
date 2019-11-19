@@ -1,0 +1,9 @@
+<select
+  (change)="onSelect($event.target.value)"
+>
+  <option
+    *ngFor="let option of options"
+    [value]="option"
+    [selected]="option === value"
+  >{{option}}</option>
+</select>

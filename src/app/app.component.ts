@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Rule } from './common/rule'
+import { multRules, multMemory } from './unar-mult'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mt';
+  rules: Rule[] = multRules
+  memory: Array<string> = multMemory
 }
+

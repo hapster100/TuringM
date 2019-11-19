@@ -1,0 +1,119 @@
+<div class="lists">
+
+  <h3>States:</h3>
+  <div
+  class="rowlist"
+  >
+  <div
+  class="list-item state"
+  *ngFor="let state of states"
+  >
+  <div
+  class="item-content"
+  >
+  {{state}}
+</div>
+<div class="delete-button" (click)="deleteState(state)">x</div>
+</div>
+</div>
+  <div
+    class="add"
+  >
+    <input #newState />
+    <div
+      class="add-button"
+      (click)="addState(newState.value)"
+    >Add State</div>
+  </div>
+
+  <h3>Alphabet:</h3>
+  <div
+    class="rowlist"
+  >
+    <div
+      *ngFor="let alpha of alphabet"
+      class="list-item alpha"
+    >
+      <div
+        class="item-content"
+      >
+        {{alpha}}
+      </div>
+      <div class="delete-button" (click)="deleteAlpha(alpha)">x</div>
+    </div>
+  </div>
+  <div
+    class="add"
+  >
+    <input #newAlpha />
+    <div
+      class="add-button"
+      (click)="addAlpha(newAlpha.value)"
+    >Add Alpha</div>
+  </div>
+
+  <h3>Rules:</h3>
+  <div
+    class="rowlist rules"
+  >
+    <div
+      *ngFor="let rule of rules"
+      class="list-item rule"
+    >
+      <div
+        class="item-content"
+      >
+        {{rule.ruleString()}}
+      </div>
+      <div class="delete-button" (click)="deleteRule(rule)">x</div>
+    </div>
+  </div>
+  <div
+    class="add"
+  >
+
+    <div
+      class="add-rule-state"
+    >
+      Start State:<app-select
+        [options]="states"
+        [(value)]="ruleForm.startState"
+      ></app-select>
+
+      End State:<app-select
+        [options]="states"
+        [(value)]="ruleForm.endState"
+      ></app-select>
+    </div>
+
+    <div
+      class="add-rule-data"
+    >
+      Start Data:<app-select
+        [options]="alphabet"
+        [(value)]="ruleForm.startData"
+        ></app-select>
+
+      Rewrite to:<app-select
+        [options]="alphabet"
+        [(value)]="ruleForm.rewriteData"
+      ></app-select>
+    </div>
+    <div
+      class="add-rule-action"
+    >
+      Action:<app-select
+        [options]="getActions()"
+        [(value)]="ruleForm.action"
+      ></app-select>
+    </div>
+    <div
+      class="add-button"
+      (click)="addRule()"
+    >Add Rule</div>
+  </div>
+
+</div>
+
+
+

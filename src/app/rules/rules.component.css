@@ -1,0 +1,114 @@
+.lists {
+  display: flex;
+  flex-direction: column;
+  font-family: monospace;
+  align-items: center;
+}
+
+.rowlist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.list-item {
+  height: 40px;
+  min-width: 60px;
+  font-size: 16px;
+  margin-left: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item-content {
+  width: calc(100% - 20px);
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-button {
+  background-color: red;
+  color: white;
+  height: 100%;
+  width: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(139, 27, 27, 0.685);
+}
+
+.state {
+  background-color: rgb(248, 136, 116);
+  color: black;
+}
+
+.alpha {
+  background-color: rgb(172, 212, 92);
+  color: black;
+}
+
+.rule {
+  margin-top: 10px;
+  background-color: rgb(238, 206, 146);
+  color: black;
+}
+
+.addbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: monospace;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  border: 2px solid black;
+
+  width: fit-content;
+}
+
+.add-button:hover {
+  background-color: black;
+  color: white;
+  transition:  color 0.5s;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.add input {
+  text-align: center;
+  font: 400 13.3333px monospace;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.add-rule-action {
+  margin-bottom: 10px;
+}
+
+.rules {
+
+}

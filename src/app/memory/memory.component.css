@@ -1,0 +1,23 @@
+.memory {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+
+.memory-cell {
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,34 @@
+<div
+  class="memory"
+>
+  <div
+    *ngFor="let cell of zeroStartMemory(); let i = index"
+    [ngClass]="{
+      'memory-cell': true,
+      'current': i === zeroStartPosition()
+    }"
+  >
+    {{cell === '' ? ' ' : cell}}
+  </div>
+</div>
+
+<span>
+  To Write:
+</span>
+<input #toWrite (keyup)="0" />
+
+<span>
+  Was Read:
+</span>
+<input disabled [value]="wasRead" />
+
+<div class="control-buttons">
+  <button (click)="toLeft()">Move Left</button>
+  <button (click)="toRight()">Move Right</button>
+  <button (click)="write(toWrite.value)">Write</button>
+  <button (click)="read()">Read</button>
+</div>
+
+<button
+  (click)="toggleWork()"
+>{{isWork ? "Stop" : "Start"}}</button>
